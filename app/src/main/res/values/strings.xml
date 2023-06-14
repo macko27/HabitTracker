@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- App title and fragment titles -->
+    <string name="app_name">Habit Tracker</string>
+    <string name="sleep_tracker_fragment">SleepTrackerFragment</string>
+    <string name="sleep_quality_fragment">SleepQualityFragment</string>
+    <string name="create">Create</string>
+    <string name="date">Date</string>
+    <string name="choose_date">Choose date</string>
+    <string name="days_without_fail">Days without fail</string>
+    <string name="name">Name</string>
+    <string name="information">Information</string>
+    <string name="easy">Easy</string>
+    <string name="hard">Hard</string>
+    <string name="name_of_habit">Name of habit</string>
+    <string name="creation_date">Creation date</string>
+    <string name="date_of_last_failure">Date of last failure</string>
+    <string name="_7_days_boss">7 days boss</string>
+    <string name="_30_days_boss">30 days boss</string>
+    <string name="_60_days_boss">60 days boss</string>
+    <string name="_90_days_boss">90 days boss</string>
+    <string name="_180_days_boss">180 days boss</string>
+    <string name="_365_days_boss">365 days boss</string>
+    <string name="fulfill">Fulfill</string>
+    <string name="fail">Fail</string>
+    <string name="update">Update</string>
+    <string name="notifications_every_24_hours">Notifications every 24 hours</string>
+    <string name="delete_all_habits">Delete all habits</string>
+    <string name="reset_personal_data">Reset personal data</string>
+    <string name="delete_habit">Delete habit</string>
+    <string name="update_habit">Update habit</string>
+
+</resources>

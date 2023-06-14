@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.HabitInfo">
+
+    <data>
+        <variable
+            name="habitViewModel"
+            type="com.example.android.habittracker.habitlist.viewmodel.HabitListViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/habit_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:hint="@string/name"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/habit_days"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:hint="@string/days_without_fail"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habit_name" />
+
+            <TextView
+                android:id="@+id/habit_info"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:hint="@string/information"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habit_days" />
+
+            <TextView
+                android:id="@+id/habit_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:hint="@string/creation_date"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habit_info" />
+
+            <TextView
+                android:id="@+id/habit_fail_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:hint="@string/date_of_last_failure"
+                android:padding="16dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/habit_date" />
+
+
+            <Button
+                android:id="@+id/button_boss_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/_7_days_boss"
+                android:background="@drawable/round_button_info"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/habit_fail_date"
+                app:layout_constraintTop_toBottomOf="@+id/habit_fail_date" />
+
+            <Button
+                android:id="@+id/button_boss_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/_30_days_boss"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/habit_fail_date"
+                app:layout_constraintTop_toBottomOf="@+id/habit_fail_date" />
+
+            <Button
+                android:id="@+id/button_boss_60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/_60_days_boss"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_boss_7"
+                app:layout_constraintStart_toStartOf="@+id/button_boss_7"
+                app:layout_constraintTop_toBottomOf="@+id/button_boss_7" />
+
+            <Button
+                android:id="@+id/button_boss_90"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/_90_days_boss"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_boss_30"
+                app:layout_constraintStart_toStartOf="@+id/button_boss_30"
+                app:layout_constraintTop_toBottomOf="@+id/button_boss_30" />
+
+            <Button
+                android:id="@+id/button_boss_180"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/_180_days_boss"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_boss_60"
+                app:layout_constraintStart_toStartOf="@+id/button_boss_60"
+                app:layout_constraintTop_toBottomOf="@+id/button_boss_60" />
+
+            <Button
+                android:id="@+id/button_boss_365"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/_365_days_boss"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_boss_90"
+                app:layout_constraintStart_toStartOf="@+id/button_boss_90"
+                app:layout_constraintTop_toBottomOf="@+id/button_boss_90" />
+
+            <Button
+                android:id="@+id/button_fullfill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/fulfill"
+                android:textColor="#FFEB3B"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_boss_365"
+                app:layout_constraintHorizontal_bias="0.533"
+                app:layout_constraintStart_toStartOf="@+id/button_boss_180"
+                app:layout_constraintTop_toBottomOf="@+id/button_boss_180" />
+
+            <Button
+                android:id="@+id/button_fail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/round_button_info"
+                android:text="@string/fail"
+                android:textColor="#FFEB3B"
+                android:textColorHint="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/button_fullfill"
+                app:layout_constraintStart_toStartOf="@+id/button_fullfill"
+                app:layout_constraintTop_toBottomOf="@+id/button_fullfill" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

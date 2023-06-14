@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/habitList">
+
+    <fragment
+        android:id="@+id/habitList"
+        android:name="com.example.android.habittracker.habitlist.fragments.HabitList"
+        android:label="fragment_habit_list"
+        tools:layout="@layout/fragment_habit_list" >
+        <action
+            android:id="@+id/action_habitList_to_habitAdd"
+            app:destination="@id/habitAdd" />
+        <action
+            android:id="@+id/action_habitList_to_habitInfo"
+            app:destination="@id/habitInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitAdd"
+        android:name="com.example.android.habittracker.habitlist.fragments.HabitAdd"
+        android:label="fragment_habit_add"
+        tools:layout="@layout/fragment_habit_add" >
+        <action
+            android:id="@+id/action_habitAdd_to_habitList"
+            app:destination="@id/habitList"
+            app:popUpTo="@id/habitList"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitUpdate"
+        android:name="com.example.android.habittracker.habitlist.fragments.HabitUpdate"
+        android:label="fragment_habit_update"
+        tools:layout="@layout/fragment_habit_update" >
+        <argument
+            android:name="habit"
+            app:argType="com.example.habittracer.database.Habit" />
+        <action
+            android:id="@+id/action_habitUpdate_to_habitList"
+            app:destination="@id/habitList" />
+        <action
+            android:id="@+id/action_habitUpdate_to_habitInfo2"
+            app:destination="@id/habitInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/habitInfo"
+        android:name="com.example.android.habittracker.habitlist.fragments.HabitInfo"
+        android:label="fragment_habit_info">
+        <action
+            android:id="@+id/action_habitInfo_to_habitUpdate"
+            app:destination="@id/habitUpdate" />
+        <action
+            android:id="@+id/action_habitInfo_to_habitList"
+            app:destination="@id/habitList" />
+        <argument
+            android:name="habit"
+            app:argType="com.example.habittracer.database.Habit" />
+    </fragment>
+</navigation>

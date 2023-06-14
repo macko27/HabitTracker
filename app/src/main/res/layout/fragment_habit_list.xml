@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HabitList.HabitList">
+
+    <data>
+        <variable
+            name="habitListViewModel"
+            type="com.example.android.habittracker.habitlist.viewmodel.HabitListViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cardview_dark_background">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/habit_list"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/button_add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_person"
+            tools:listitem="@layout/habit_item"/>
+
+
+        <ImageView
+            android:id="@+id/image_person"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_thumb_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Showing if person is dead or alive." />
+
+        <TextView
+            android:id="@+id/person_health"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:text="Zivoty: 50/50"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/person_experiences"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Skúsenosti: 0/100"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            app:layout_constraintBottom_toTopOf="@+id/person_level"
+            app:layout_constraintEnd_toEndOf="@+id/person_health"
+            app:layout_constraintStart_toStartOf="@+id/person_health"
+            app:layout_constraintTop_toBottomOf="@+id/person_health" />
+
+        <TextView
+            android:id="@+id/person_level"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginBottom="24dp"
+            android:text="Level: 1"
+            android:textAlignment="center"
+            android:textColor="#FFEB3B"
+            app:layout_constraintBottom_toTopOf="@+id/habit_list"
+            app:layout_constraintEnd_toEndOf="@+id/person_experiences"
+            app:layout_constraintStart_toStartOf="@+id/person_experiences" />
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/round_button_info"
+            android:text="ADD"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
